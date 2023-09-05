@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h1>Employees Information</h1>
+        {% if all_data %}
+        <table>
+            <thead>
+                <th>EmpNumber</th>
+                <th>EmpName</th>
+                <th>EmplSalary</th>
+                <th>EmplAddress</th>
+            </thead>
+            {% for employee in all_data%}
+            <tr>
+                <td>{{employee.e_no}}</td>
+                <td>{{employee.e_name}}</td>
+                <td>{{employee.e_sal}}</td>
+                <td>{{employee.e_address}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+        {% else %}
+        <p>No Employee Records are Found !!!</p>
+        {% endif %}
+    </body>
+</html>
